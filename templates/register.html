@@ -78,12 +78,26 @@
 
             <label>Password</label>
 
-            <input
-                type="password"
-                name="password"
-                placeholder="Create a password"
-                required
-            >
+            <div class="password-container">
+
+                <input
+                    type="password"
+                    name="password"
+                    id="registerPassword"
+                    placeholder="Create a password"
+                    required
+                >
+
+                <button
+                    type="button"
+                    class="show-password"
+                    id="registerShowButton"
+                    onclick="toggleRegisterPassword()"
+                >
+                    Show
+                </button>
+
+            </div>
 
 
             <label>Membership Plan</label>
@@ -129,6 +143,30 @@
     </div>
 
 </div>
+
+
+<script>
+
+function toggleRegisterPassword() {
+
+    const password = document.getElementById("registerPassword");
+    const button = document.getElementById("registerShowButton");
+
+    if (password.type === "password") {
+
+        password.type = "text";
+        button.textContent = "Hide";
+
+    } else {
+
+        password.type = "password";
+        button.textContent = "Show";
+
+    }
+}
+
+</script>
+
 
 </body>
 </html>

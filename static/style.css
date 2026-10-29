@@ -773,3 +773,33 @@ footer h2{
         grid-template-columns: 1fr;
     }
 }
+/* PASSWORD SHOW / HIDE */
+
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+.password-container input {
+    width: 100%;
+    padding-right: 75px;
+}
+
+.show-password {
+    position: absolute;
+    right: 12px;
+    top: 14px;
+
+    background: transparent;
+    border: none;
+
+    color: #00f59b;
+    font-size: 13px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.show-password:hover {
+    color: white;
+}

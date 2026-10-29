@@ -100,10 +100,32 @@
         </div>
 
 
+        <div class="dashboard-card">
+
+            <h3>📅 DAYS LEFT</h3>
+
+            {% if days_left > 0 %}
+
+                <p class="plan-name">
+                    {{ days_left }} Days
+                </p>
+
+            {% else %}
+
+                <p class="plan-name">
+                    Membership Expired
+                </p>
+
+            {% endif %}
+
+        </div>
+
+
     </div>
 
 </section>
 
 
 </body>
+
 </html>

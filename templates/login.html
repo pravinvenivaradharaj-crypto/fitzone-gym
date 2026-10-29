@@ -61,12 +61,26 @@
 
             <label>Password</label>
 
-            <input
-                type="password"
-                name="password"
-                placeholder="Enter your password"
-                required
-            >
+            <div class="password-container">
+
+                <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="Enter your password"
+                    required
+                >
+
+                <button
+                    type="button"
+                    class="show-password"
+                    onclick="togglePassword()"
+                    id="showButton"
+                >
+                    Show
+                </button>
+
+            </div>
 
 
             <button type="submit" class="btn auth-button">
@@ -87,6 +101,30 @@
     </div>
 
 </div>
+
+
+<script>
+
+function togglePassword() {
+
+    const password = document.getElementById("password");
+    const button = document.getElementById("showButton");
+
+    if (password.type === "password") {
+
+        password.type = "text";
+        button.textContent = "Hide";
+
+    } else {
+
+        password.type = "password";
+        button.textContent = "Show";
+
+    }
+}
+
+</script>
+
 
 </body>
 </html>
