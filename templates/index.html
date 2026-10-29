@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FitZone Gym</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav>
+
+        <div class="logo">
+            FITZONE
+        </div>
+
+        <div class="nav-links">
+
+            <a href="/">Home</a>
+            <a href="#programs">Programs</a>
+            <a href="#membership">Membership</a>
+            <a href="#bmi">BMI</a>
+
+            <a href="/login">Login</a>
+
+            <a href="/register" class="nav-btn">
+                Register
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-title">
+                WELCOME TO FITZONE
+            </p>
+
+            <h1>
+                BUILD YOUR
+                <span>BEST BODY</span>
+            </h1>
+
+            <p class="hero-text">
+                Train harder. Get stronger. Transform yourself
+                with professional training at FitZone Gym.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="/register" class="btn">
+                    JOIN NOW
+                </a>
+
+                <a href="#programs" class="second-btn">
+                    EXPLORE PROGRAMS
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROGRAMS -->
+
+    <section class="section" id="programs">
+
+        <p class="small-title center">
+            WHAT WE OFFER
+        </p>
+
+        <h2 class="section-title">
+            OUR <span>PROGRAMS</span>
+        </h2>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <div class="icon">🏋️</div>
+
+                <h3>Strength Training</h3>
+
+                <p>
+                    Build strength and muscle with
+                    structured workout programs.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">💪</div>
+
+                <h3>Personal Training</h3>
+
+                <p>
+                    Train with professional guidance
+                    and personalized fitness plans.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">🏃</div>
+
+                <h3>Cardio Training</h3>
+
+                <p>
+                    Improve your endurance and
+                    cardiovascular fitness.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">🥗</div>
+
+                <h3>Nutrition Guidance</h3>
+
+                <p>
+                    Learn healthy nutrition habits
+                    that support your fitness goals.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MEMBERSHIP -->
+
+    <section class="membership" id="membership">
+
+        <p class="small-title center">
+            PRICING
+        </p>
+
+        <h2 class="section-title">
+            MEMBERSHIP <span>PLANS</span>
+        </h2>
+
+
+        <div class="plans">
+
+
+            <div class="plan">
+
+                <h3>Basic</h3>
+
+                <div class="price">
+                    ₹999
+                    <span>/month</span>
+                </div>
+
+                <p>✓ Gym Access</p>
+                <p>✓ Cardio Equipment</p>
+                <p>✓ Locker Facility</p>
+                <p>✓ Basic Support</p>
+
+                <a href="/register" class="btn">
+                    CHOOSE BASIC
+                </a>
+
+            </div>
+
+
+
+            <div class="plan premium">
+
+                <div class="popular">
+                    MOST POPULAR
+                </div>
+
+                <h3>Premium</h3>
+
+                <div class="price">
+                    ₹1,499
+                    <span>/month</span>
+                </div>
+
+                <p>✓ Full Gym Access</p>
+                <p>✓ Personal Trainer</p>
+                <p>✓ Workout Plan</p>
+                <p>✓ Nutrition Guidance</p>
+
+                <a href="/register" class="btn">
+                    CHOOSE PREMIUM
+                </a>
+
+            </div>
+
+
+
+            <div class="plan">
+
+                <h3>Pro</h3>
+
+                <div class="price">
+                    ₹1,999
+                    <span>/month</span>
+                </div>
+
+                <p>✓ Everything in Premium</p>
+                <p>✓ Advanced Training</p>
+                <p>✓ Monthly Assessment</p>
+                <p>✓ Priority Support</p>
+
+                <a href="/register" class="btn">
+                    CHOOSE PRO
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- BMI -->
+
+    <section class="section" id="bmi">
+
+        <p class="small-title center">
+            FITNESS TOOL
+        </p>
+
+        <h2 class="section-title">
+            BMI <span>CALCULATOR</span>
+        </h2>
+
+        <div class="bmi-box">
+
+            <input type="number"
+                   id="weight"
+                   placeholder="Enter weight (kg)">
+
+            <input type="number"
+                   id="height"
+                   placeholder="Enter height (cm)">
+
+            <button onclick="calculateBMI()" class="btn">
+                CALCULATE
+            </button>
+
+            <div id="bmiResult"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- JOIN SECTION -->
+
+    <section class="join-section">
+
+        <h2>
+            READY TO START YOUR
+            <span>FITNESS JOURNEY?</span>
+        </h2>
+
+        <p>
+            Become a FitZone member and start training today.
+        </p>
+
+        <a href="/register" class="btn">
+            CREATE ACCOUNT
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h2>FITZONE</h2>
+
+        <p>
+            Train Hard. Stay Strong.
+        </p>
+
+        <p class="copyright">
+            © 2026 FitZone Gym. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script>
+
+        function calculateBMI(){
+
+            let weight =
+                parseFloat(document.getElementById("weight").value);
+
+            let height =
+                parseFloat(document.getElementById("height").value);
+
+            let result =
+                document.getElementById("bmiResult");
+
+
+            if(!weight || !height || weight <= 0 || height <= 0){
+
+                result.innerHTML =
+                    "Please enter valid height and weight.";
+
+                return;
+            }
+
+
+            let heightMeter = height / 100;
+
+            let bmi =
+                weight / (heightMeter * heightMeter);
+
+
+            result.innerHTML =
+                "Your BMI: " + bmi.toFixed(1);
+
+        }
+
+    </script>
+
+</body>
+</html>

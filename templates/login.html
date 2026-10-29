@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | FitZone</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">FITZONE</div>
+
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/register">Register</a>
+    </div>
+</nav>
+
+
+<div class="auth-container">
+
+    <div class="auth-box">
+
+        <p class="small-title">WELCOME BACK</p>
+
+        <h1>
+            MEMBER <span>LOGIN</span>
+        </h1>
+
+        <p class="auth-description">
+            Login to access your FitZone account.
+        </p>
+
+
+        {% if error %}
+
+            <div class="error-message">
+                {{ error }}
+            </div>
+
+        {% endif %}
+
+
+        <form method="POST" action="/login">
+
+            <label>Email Address</label>
+
+            <input
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+            >
+
+
+            <label>Password</label>
+
+            <input
+                type="password"
+                name="password"
+                placeholder="Enter your password"
+                required
+            >
+
+
+            <button type="submit" class="btn auth-button">
+                LOGIN
+            </button>
+
+        </form>
+
+
+        <p class="auth-bottom">
+            Don't have an account?
+
+            <a href="/register">
+                Register here
+            </a>
+        </p>
+
+    </div>
+
+</div>
+
+</body>
+</html>

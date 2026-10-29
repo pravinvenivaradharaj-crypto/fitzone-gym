@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register | FitZone</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<nav>
+
+    <div class="logo">
+        FITZONE
+    </div>
+
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/login">Login</a>
+    </div>
+
+</nav>
+
+
+<div class="auth-container">
+
+    <div class="auth-box">
+
+        <p class="small-title">
+            BECOME A MEMBER
+        </p>
+
+        <h1>
+            CREATE <span>ACCOUNT</span>
+        </h1>
+
+        <p class="auth-description">
+            Join FitZone and start your fitness journey.
+        </p>
+
+
+        <form method="POST" action="/register">
+
+            <label>Full Name</label>
+
+            <input
+                type="text"
+                name="name"
+                placeholder="Enter your name"
+                required
+            >
+
+
+            <label>Email Address</label>
+
+            <input
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+            >
+
+
+            <label>Phone Number</label>
+
+            <input
+                type="tel"
+                name="phone"
+                placeholder="Enter your phone number"
+                required
+            >
+
+
+            <label>Password</label>
+
+            <input
+                type="password"
+                name="password"
+                placeholder="Create a password"
+                required
+            >
+
+
+            <label>Membership Plan</label>
+
+            <select name="plan" required>
+
+                <option value="">
+                    Select Membership
+                </option>
+
+                <option value="Basic">
+                    Basic - ₹999/month
+                </option>
+
+                <option value="Premium">
+                    Premium - ₹1,499/month
+                </option>
+
+                <option value="Pro">
+                    Pro - ₹1,999/month
+                </option>
+
+            </select>
+
+
+            <button type="submit" class="btn auth-button">
+                CREATE ACCOUNT
+            </button>
+
+        </form>
+
+
+        <p class="auth-bottom">
+
+            Already a member?
+
+            <a href="/login">
+                Login here
+            </a>
+
+        </p>
+
+    </div>
+
+</div>
+
+</body>
+</html>

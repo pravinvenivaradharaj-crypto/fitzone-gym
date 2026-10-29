@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | FitZone</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+
+<nav>
+
+    <div class="logo">
+        FITZONE
+    </div>
+
+    <div class="nav-links">
+
+        <a href="/">Home</a>
+
+        <a href="/logout" class="nav-btn">
+            Logout
+        </a>
+
+    </div>
+
+</nav>
+
+
+
+<section class="dashboard">
+
+    <p class="small-title">
+        MEMBER DASHBOARD
+    </p>
+
+    <h1>
+        WELCOME,
+        <span>{{ member["name"] }}</span>
+    </h1>
+
+    <p class="dashboard-text">
+        Your FitZone membership information
+    </p>
+
+
+    <div class="dashboard-cards">
+
+
+        <div class="dashboard-card">
+
+            <h3>👤 MEMBER</h3>
+
+            <p>
+                {{ member["name"] }}
+            </p>
+
+        </div>
+
+
+        <div class="dashboard-card">
+
+            <h3>📧 EMAIL</h3>
+
+            <p>
+                {{ member["email"] }}
+            </p>
+
+        </div>
+
+
+        <div class="dashboard-card">
+
+            <h3>📱 PHONE</h3>
+
+            <p>
+                {{ member["phone"] }}
+            </p>
+
+        </div>
+
+
+        <div class="dashboard-card">
+
+            <h3>🏋️ MEMBERSHIP</h3>
+
+            <p class="plan-name">
+                {{ member["plan"] }}
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+</body>
+</html>
